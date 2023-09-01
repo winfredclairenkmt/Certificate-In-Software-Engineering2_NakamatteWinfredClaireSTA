@@ -1,0 +1,93 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title GenQ KYC
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css')
+  link(rel="stylesheet" href="/css")
+.container.mt-5
+  .row.justify-content-center
+    .col-lg-8
+      .card
+        .card-body
+          h1.card-title.text-center GENQ KYC FORM
+          form#GENQ(name='GENQ' action='/api/reggenq' method='POST' onsubmit='return Validate(event)')
+            .mb-3
+              h3.text-center Bio-data
+              .row
+                .col-md-6
+                  label.form-label(for='fname')
+                    | First name
+                    span#fnameError.text-danger *
+                  input#fname.form-control(type='text' name='fname' placeholder='First name')
+                .col-md-6
+                  label.form-label(for='lname')
+                    | Last name
+                    span#lnameError.text-danger *
+                  input#lname.form-control(type='text' name='lname' placeholder='Last name')
+            .mb-3
+              .row
+                .col-md-6
+                  label.form-label(for='dob')
+                    | Date of birth
+                    span#dobError.text-danger *
+                  input#dob.form-control(type='date' name='dob')
+                .col-md-6
+                  label.form-label(for='gender')
+                    | Gender
+                    span#genderError.text-danger *
+                  select#gender.form-select(name='gender')
+                    option(value='' disabled='') Select
+                    option(value='male') Male
+                    option(value='female') Female
+            .mb-3
+              h3.text-center Location
+              .row
+                .col-md-6
+                  label.form-label(for='country')
+                    | Country
+                    span#countryError.text-danger *
+                  input#country.form-control(type='text' name='country' placeholder='Country')
+                .col-md-6
+                  label.form-label(for='state')
+                    | State/District
+                    span#stateError.text-danger *
+                  input#state.form-control(type='text' name='state' placeholder='State/District')
+            .mb-3
+              .row
+                .col-md-6
+                  label.form-label(for='town')
+                    | Town
+                    span#townError.text-danger *
+                  input#town.form-control(type='text' name='town' placeholder='Town')
+                .col-md-6
+                  label.form-label(for='zipcode')
+                    | Zip Code
+                    span#zipcodeError.text-danger *
+                  input#zipcode.form-control(type='number' name='zipcode' placeholder='Zip Code')
+            .mb-3
+              h3.text-center Contact and Address
+              .row
+                .col-md-6
+                  label.form-label(for='tel1')
+                    | Phone number 1
+                    span#tel1Error.text-danger *
+                  input#tel1.form-control(type='text' name='tel1' placeholder='Phone number 1')
+                .col-md-6
+                  label.form-label(for='tel2')
+                    | Phone number 2
+                    span#tel2Error.text-danger *
+                  input#tel2.form-control(type='text' name='tel2' placeholder='Phone number 2')
+            .mb-3
+              .row
+                .col-md-6
+                  label.form-label(for='email')
+                    | Email
+                    span#emailError.text-danger *
+                  input#email.form-control(type='text' name='email' placeholder='Email')
+            .mb-3
+              .row.justify-content-end
+                .col-md-6
+                  button.btn.btn-primary.btn-block(type='submit') Submit
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js')
+script(src="/js")

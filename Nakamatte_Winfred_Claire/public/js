@@ -1,0 +1,153 @@
+const Validate = (event) => {
+    let error = 0;
+
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const dob = document.getElementById("dob");
+    const gender = document.getElementById("gender");
+    const country = document.getElementById("country");
+    const state = document.getElementById("state");
+    const town = document.getElementById("town");
+    const zipcode = document.getElementById("zipcode");
+    const tel1 = document.getElementById("tel1");
+    const tel2 = document.getElementById("tel2");
+    const email = document.getElementById("email");
+
+    // Picking error fields
+    const fnameError = document.getElementById("fnameError");
+    const lnameError = document.getElementById("lnameError");
+    const dobError = document.getElementById("dobError");
+    const genderError = document.getElementById("genderError");
+    const countryError = document.getElementById("countryError");
+    const stateError = document.getElementById("stateError");
+    const townError = document.getElementById("townError");
+    const zipcodeError = document.getElementById("zipcodeError");
+    const tel1Error = document.getElementById("tel1Error");
+    const tel2Error = document.getElementById("tel2Error");
+    const emailError = document.getElementById("emailError");
+
+    // Validating input for first name
+    if (fname.value === "" || fname.value.length < 3 || fname.value.length > 225) {
+        fname.style.border = "1px solid red";
+        fnameError.textContent = "Enter your first name here (3-225 characters)";
+        fnameError.style.color = "red";
+        fname.focus();
+        error++;
+    } else {
+        fname.style.border = "1px solid green";
+    }
+
+    // Validating input for last name
+    if (lname.value === "" || lname.value.length < 3 || lname.value.length > 225) {
+        lname.style.border = "1px solid red";
+        lnameError.textContent = "Enter your last name here (3-225 characters)";
+        lnameError.style.color = "red";
+        lname.focus();
+        error++;
+    } else {
+        lname.style.border = "1px solid green";
+    }
+
+    // Validating input for date of birth
+    if (dob.value === "") {
+        dob.style.border = "1px solid red";
+        dobError.textContent = "Select your date of birth";
+        dobError.style.color = "red";
+        dob.focus();
+        error++;
+    } else {
+        dob.style.border = "1px solid green";
+    }
+
+    // Validating input for gender
+    if (gender.value === "") {
+        gender.style.border = "1px solid red";
+        genderError.textContent = "Select your gender";
+        genderError.style.color = "red";
+        gender.focus();
+        error++;
+    } else {
+        gender.style.border = "1px solid green";
+    }
+
+    // Validating input for country
+    if (country.value === "" || country.value.length < 3 || country.value.length > 225) {
+        country.style.border = "1px solid red";
+        countryError.textContent = "Enter your country here (3-225 characters)";
+        countryError.style.color = "red";
+        country.focus();
+        error++;
+    } else {
+        country.style.border = "1px solid green";
+    }
+
+    // Validating input for state
+    if (state.value === "" || state.value.length < 3 || state.value.length > 225) {
+        state.style.border = "1px solid red";
+        stateError.textContent = "Enter your state here (3-225 characters)";
+        stateError.style.color = "red";
+        state.focus();
+        error++;
+    } else {
+        state.style.border = "1px solid green";
+    }
+
+    // Validating input for town
+    if (town.value === "" || town.value.length < 3 || town.value.length > 225) {
+        town.style.border = "1px solid red";
+        townError.textContent = "Enter your town here (3-225 characters)";
+        townError.style.color = "red";
+        town.focus();
+        error++;
+    } else {
+        town.style.border = "1px solid green";
+    }
+
+    // Validating input for zipcode
+    if (zipcode.value === "") {
+        zipcode.style.border = "1px solid red";
+        zipcodeError.textContent = "Enter your zipcode here";
+        zipcodeError.style.color = "red";
+        zipcode.focus();
+        error++;
+    } else {
+        zipcode.style.border = "1px solid green";
+    }
+
+    // Validating input for phone number 1
+    if (tel1.value === "") {
+        tel1.style.border = "1px solid red";
+        tel1Error.textContent = "Enter your phone number here";
+        tel1Error.style.color = "red";
+        tel1.focus();
+        error++;
+    } else {
+        tel1.style.border = "1px solid green";
+    }
+
+    // Validating input for phone number 2
+    if (tel2.value === "") {
+        tel2.style.border = "1px solid red";
+        tel2Error.textContent = "Enter your phone number here";
+        tel2Error.style.color = "red";
+        tel2.focus();
+        error++;
+    } else {
+        tel2.style.border = "1px solid green";
+    }
+
+    // Validating input for email
+    if (email.value === "") {
+        email.style.border = "1px solid red";
+        emailError.textContent = "Enter your email here";
+        emailError.style.color = "red";
+        email.focus();
+        error++;
+    } else {
+        email.style.border = "1px solid green";
+    }
+
+    if (error > 0) {
+        event.preventDefault();
+    }
+};
